@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="{% static 'images/port-1.jpg' %}" class="profile-pic" alt="Profile">
+        <h1>V VASIGARAN</h1>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/_iam_vasi" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/vasigaran-v-a478a8251" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/VASIGARANV" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/918639596951" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <nav>
+            <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'about' %}"><i class="fas fa-user"></i> About</a>
+            <a href="{% url 'resume_view' %}"><i class="fas fa-file"></i> Resume</a>
+            <a href="{% url 'skills' %}"><i class="fas fa-code"></i> Skills</a>
+            <a href="{% url 'project' %}"><i class="fas fa-briefcase"></i> Projects</a>
+            <a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

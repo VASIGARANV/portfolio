@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="main-content">
+  <section class="resume-section">
+    <h2>My Resume</h2>
+    <p>You can download my latest resume by clicking the button below:</p>
+
+    <a href="{% static 'files/VVASIGARAN RESUME.pdf' %}" download class="download-btn">
+      <i class="bi bi-download"></i> Download Resume
+    </a>
+  </section>
+</div>
+{% endblock %}

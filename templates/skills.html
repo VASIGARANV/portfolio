@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <!-- Main Content -->
+  <div class="main-content">
+    <section class="skills-section">
+      <h2>Skills</h2>
+      <p>
+        I am proficient in a variety of programming languages including Python, JavaScript, and C#. 
+        I have experience building full stack web applications using Django, Flask and front-end tools 
+        like HTML, CSS, and JavaScript. I am always learning and open to exploring new technologies.
+      </p>
+
+      <div class="skill">
+        <label>HTML</label>
+        <div class="bar"><div class="progress" style="width:100%;">100%</div></div>
+      </div>
+      <div class="skill">
+        <label>CSS</label>
+        <div class="bar"><div class="progress" style="width:90%;">90%</div></div>
+      </div>
+      <div class="skill">
+        <label>JavaScript</label>
+        <div class="bar"><div class="progress" style="width:75%;">75%</div></div>
+      </div>
+      <div class="skill">
+        <label>Python</label>
+        <div class="bar"><div class="progress" style="width:95%;">95%</div></div>
+      </div>
+      <div class="skill">
+        <label>Bootstrap</label>
+        <div class="bar"><div class="progress" style="width:90%;">90%</div></div>
+      </div>
+      <div class="skill">
+        <label>SQL</label>
+        <div class="bar"><div class="progress" style="width:90%;">90%</div></div>
+      </div>
+      <div class="skill">
+        <label>Git, GitHub, GitLab</label>
+        <div class="bar"><div class="progress" style="width:90%;">90%</div></div>
+      </div>
+      <div class="skill">
+        <label>Django</label>
+        <div class="bar"><div class="progress" style="width:90%;">90%</div></div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.progress').forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => {
+          bar.style.transition = 'width 0.1s ease-in-out';
+          bar.style.width = width;
+        }, 100);
+      });
+    });
+  </script>
+{% endblock %}

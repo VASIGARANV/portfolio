@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="main-content">
+    <div class="contact-section">
+        <!-- Your contact content -->
+         <section class="contact-section">
+  <div class="contact-overlay">
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <p class="contact-description">
+        Thank you for visiting and spending your valuable time with us. I hope you found what you were looking for.
+    I am always open to work on challenging operations and put my skills to use. If you are in need of someone
+    with my skills and experience, please don't hesitate to contact me. I am confident that I can contribute value
+     to your team and help achieve your business goals. Thank you again for visiting. I look forward to hearing from you soon
+      </p>
+
+      <div class="contact-flex">
+        <!-- Left Info -->
+        <div class="contact-info">
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Marathahlli, Bangalore, Karnataka, India 560037</p>
+          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> vasigaranvasee79714@gmail.com</p>
+          <p><i class="fas fa-phone"></i> <strong>Call:</strong> +918639596951</p>
+          <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong>www.linkedin.com/in/vasigaran-v-a478a8251</p>
+        </div>
+
+        <!-- Right Form -->
+        
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Submit</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+</div>
+
+{% endblock %}
